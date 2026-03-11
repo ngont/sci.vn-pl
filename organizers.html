@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organizers - PSSI 2025</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Specific styles for the organizers page */
+        .committee-section {
+            margin-bottom: 40px;
+        }
+        .committee-list {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+        .committee-list li {
+            background: #f9f9f9;
+            padding: 15px;
+            border-left: 3px solid #ac1c2c;
+            border-radius: 0 5px 5px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .member-name {
+            font-weight: bold;
+            color: #333;
+            display: block;
+        }
+        .member-affiliation {
+            font-size: 0.85rem;
+            color: #666;
+        }
+        .partners-grid {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .partner-box {
+            background: #fff;
+            border: 1px solid #ddd;
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px;
+            width: 200px;
+            font-weight: bold;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">PSSI 2025</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="program.html">Program</a></li>
+                <li><a href="speakers.html">Speakers</a></li>
+                <li><a href="organizers.html">Organizers</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+        <section class="section">
+            <h2>Organizers & Committees</h2>
+            <p>The PSSI 2025 Symposium is made possible by the dedicated efforts of our committees and the support of our partner institutions.</p>
+            
+            <hr style="border: 0; border-top: 1px solid #eee; margin: 30px 0;">
+
+            <div class="committee-section">
+                <h3>Organizing Committee</h3>
+                <br>
+                <ul class="committee-list">
+                    <li>
+                        <span class="member-name">Dr. hab. inż. Jan Kowalski (Chair)</span>
+                        <span class="member-affiliation">Wrocław University of Science and Technology</span>
+                    </li>
+                    <li>
+                        <span class="member-name">Dr. Anna Nowak</span>
+                        <span class="member-affiliation">Wrocław University of Science and Technology</span>
+                    </li>
+                    <li>
+                        <span class="member-name">Mgr inż. Piotr Wiśniewski</span>
+                        <span class="member-affiliation">Wrocław University of Science and Technology</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="committee-section">
+                <h3>Program Committee</h3>
+                <br>
+                <ul class="committee-list">
+                    <li>
+                        <span class="member-name">Prof. dr hab. inż. Adam Zieliński</span>
+                        <span class="member-affiliation">Polish Academy of Sciences</span>
+                    </li>
+                    <li>
+                        <span class="member-name">Prof. Maria Szymańska</span>
+                        <span class="member-affiliation">University of Warsaw</span>
+                    </li>
+                    <li>
+                        <span class="member-name">Dr. hab. Tomasz Kaczmarek</span>
+                        <span class="member-affiliation">Poznań University of Technology</span>
+                    </li>
+                    <li>
+                        <span class="member-name">Dr. inż. Krzysztof Lewandowski</span>
+                        <span class="member-affiliation">AGH University of Krakow</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="committee-section">
+                <h3>Institutional Partners</h3>
+                <div class="partners-grid">
+                    <div class="partner-box">
+                        <div style="color: #ac1c2c; font-size: 1.2rem; margin-bottom: 10px;">PWr</div>
+                        Wrocław University of Science and Technology
+                    </div>
+                    <div class="partner-box">
+                        <div style="color: #ac1c2c; font-size: 1.2rem; margin-bottom: 10px;">PSSI</div>
+                        Polish Artificial Intelligence Society
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Polskie Stowarzyszenie Sztucznej Inteligencji | <a href="https://pwr.edu.pl">WUST</a></p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Navbar */
+.navbar {
+    background: #ffffff;
+    border-bottom: 3px solid #ac1c2c; /* PWr Corporate Red */
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ac1c2c;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 700;
+    padding: 0 15px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.nav-links li a:hover {
+    color: #ac1c2c;
+}
+
+/* Hero Section */
+.hero {
+    background: #333 url('https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    height: 400px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+.event-details { font-size: 1.2rem; margin-bottom: 2rem; }
+
+.btn {
+    background: #ac1c2c;
+    color: white;
+    padding: 10px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Content Sections */
+.section { padding: 40px 0; background: white; margin-bottom: 20px; padding: 30px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+h2 { border-left: 5px solid #ac1c2c; padding-left: 15px; margin-bottom: 20px; color: #ac1c2c; }
+
+/* Table */
+table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+th, td { text-align: left; padding: 12px; border-bottom: 1px solid #ddd; }
+th { background: #f8f8f8; }
+
+/* Sponsors */
+.sponsor-grid { display: flex; justify-content: space-around; gap: 20px; flex-wrap: wrap; }
+.sponsor-placeholder { background: #eee; padding: 20px; width: 150px; text-align: center; border: 1px dashed #ccc; }
+
+footer { text-align: center; padding: 20px; background: #333; color: white; margin-top: 40px; }
+footer a { color: #ac1c2c; }
