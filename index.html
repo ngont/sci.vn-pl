@@ -62,14 +62,14 @@
 
         /* --- Lightbox Modal Styles --- */
         .modal {
-            display: none; /* Hidden by default */
+            display: none;
             position: fixed;
-            z-index: 1000; /* Sit on top of the navbar */
+            z-index: 1000;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.9); /* Dark background */
+            background-color: rgba(0, 0, 0, 0.9);
             backdrop-filter: blur(5px);
         }
         .modal-content {
@@ -107,27 +107,66 @@
             font-weight: bold;
             font-size: 40px;
             transition: 0.3s ease;
-            user-select: none; /* Prevents accidentally highlighting the arrow text */
+            user-select: none;
             text-decoration: none;
         }
-        
-        .prev-arrow {
-            left: 20px;
-            border-radius: 5px;
-        }
-        
-        .next-arrow {
-            right: 20px;
-            border-radius: 5px;
-        }
-        
-        .nav-arrow:hover {
-            background-color: rgba(172, 28, 44, 0.8); /* PWr Red background on hover */
-            color: white;
-        }
+        .prev-arrow { left: 20px; border-radius: 5px; }
+        .next-arrow { right: 20px; border-radius: 5px; }
+        .nav-arrow:hover { background-color: rgba(172, 28, 44, 0.8); color: white; }
+        .close-modal:hover { color: #ac1c2c; }
 
-        .close-modal:hover {
-            color: #ac1c2c; /* PWr Red */
+        /* --- INVITATION SECTION STYLES (NEW) --- */
+        .invitation-section p {
+            margin-bottom: 15px;
+            text-align: justify;
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+        .invitation-section .lead-text {
+            font-size: 1.25rem;
+            color: #ac1c2c;
+            text-align: center;
+            margin-bottom: 25px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 15px;
+        }
+        .highlight-box {
+            background-color: #fcf4f5; /* Subtle red tint */
+            border-left: 4px solid #ac1c2c;
+            padding: 25px;
+            margin-top: 30px;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+        }
+        .highlight-box p {
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        .feature-list {
+            list-style: none;
+            padding-left: 0;
+        }
+        .feature-list li {
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        .feature-list li::before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #ffffff;
+            background-color: #ac1c2c;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -138,7 +177,7 @@
             <div class="logo">PSSI 2025</div>
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
-                <li><a href="#program">Program</a></li>
+                <li><a href="#about">About</a></li> <li><a href="#program">Program</a></li>
                 <li><a href="#speakers">Speakers</a></li>
                 <li><a href="#organizers">Organizers</a></li>
                 <li><a href="#photos">Photos</a></li> 
@@ -149,7 +188,7 @@
 
     <header class="hero">
         <div class="container glass-panel">
-            <h1>Hội thảo: Trí tuệ Việt tại Ba Lan với công cuộc phát triển  Khoa học Công nghệ Việt Nam</h1>
+            <h1>Hội thảo: Trí tuệ Việt tại Ba Lan với công cuộc phát triển Khoa học Công nghệ Việt Nam</h1>
             <p class="event-details">Warszawa, ngày 27 tháng 6 năm 2026</p>
             <a href="#contact" class="btn pulse-btn">Register Now</a>
         </div>
@@ -157,9 +196,24 @@
 
     <main class="container">
         
-        <section id="about" class="section">
-            <h2>Invitation</h2>
-            <p>We cordially invite you to the annual symposium organized by PSSI in collaboration with the Wrocław University of Science and Technology. The event focuses on the latest advancements in AI, machine learning, and their ethical implications.</p>
+        <section id="about" class="section invitation-section">
+            <h2>Thư Mời Tham Dự</h2>
+            
+            <p class="lead-text"><strong>Hội thảo: Trí tuệ Việt tại Ba Lan với công cuộc phát triển Khoa học Công nghệ (KHCN) Việt Nam</strong></p>
+            
+            <p>Việt Nam đang bước vào một kỷ nguyên chuyển mình mạnh mẽ, nơi Khoa học Công nghệ và Đổi mới sáng tạo được xem là "chìa khóa vàng", là động lực quan trọng nhất để thúc đẩy tăng trưởng GDP và đưa đất nước phát triển bền vững. Để hiện thực hóa tầm nhìn đó, Nhà nước đang có nhiều chính sách mời gọi nhân tài.</p>
+            
+            <p>Hàng loạt chính sách đột phá, những ưu đãi hấp dẫn cùng môi trường nghiên cứu ngày càng cởi mở đã được ban hành với mục tiêu duy nhất: Thu hút và tạo không gian phát triển tốt nhất cho các nhà khoa học, chuyên gia người Việt trên toàn thế giới.</p>
+            
+            <div class="highlight-box">
+                <p>Cộng đồng trí thức người Việt tại Ba Lan luôn được đánh giá cao về chuyên môn, bề dày kinh nghiệm và tinh thần hướng về nguồn cội. Nhằm giúp quý vị cập nhật bức tranh toàn cảnh về sự thay đổi của hệ sinh thái KHCN nước nhà, sự kiện được kỳ vọng là một diễn đàn mở để:</p>
+                
+                <ul class="feature-list">
+                    <li><strong>Cập nhật thông tin:</strong> Lắng nghe chia sẻ về những chính sách đãi ngộ, thu hút nhân tài mới nhất từ Việt Nam.</li>
+                    <li><strong>Kết nối cơ hội:</strong> Tìm hiểu các dự án trọng điểm quốc gia đang cần nguồn lực chuyên gia, mở ra cơ hội hợp tác nghiên cứu, chuyển giao công nghệ hoặc đầu tư.</li>
+                    <li><strong>Chia sẻ góc nhìn:</strong> Cùng nhau thảo luận, hiến kế để giải quyết các bài toán thực tiễn của đất nước.</li>
+                </ul>
+            </div>
         </section>
 
         <section id="program" class="section">
@@ -210,7 +264,6 @@
             <h2>Organizers & Committees</h2>
             
             <div class="committee-section">
-                <!-- <h3>Organizing Committee</h3> -->
                 <br>
                 <ul class="committee-list">
                     <li><span class="member-name">Dr. hab. inż. Jan Kowalski (Chair)</span><span class="member-affiliation">WUST</span></li>
@@ -300,46 +353,34 @@
         let currentPhotoIndex = 0;
         let photoArray = [];
 
-        // 1. When the page loads, gather all images into a list
         window.onload = function() {
             const images = document.querySelectorAll('.gallery-img');
             images.forEach((img, index) => {
                 photoArray.push(img.src);
-                // Change the click action to pass the image's number (index) instead of the link
                 img.onclick = function() { openModal(index); }
             });
         };
 
-        // 2. Open the modal at a specific image number
         function openModal(index) {
             currentPhotoIndex = index;
             document.getElementById('photoModal').style.display = "block";
             document.getElementById('zoomedImg').src = photoArray[currentPhotoIndex];
         }
 
-        // 3. Move forward (+1) or backward (-1)
         function changePhoto(step) {
             currentPhotoIndex += step;
-            
-            // If we go past the last photo, loop back to the first one
             if (currentPhotoIndex >= photoArray.length) {
                 currentPhotoIndex = 0;
-            } 
-            // If we go backward past the first photo, loop to the last one
-            else if (currentPhotoIndex < 0) {
+            } else if (currentPhotoIndex < 0) {
                 currentPhotoIndex = photoArray.length - 1;
             }
-            
-            // Update the image source
             document.getElementById('zoomedImg').src = photoArray[currentPhotoIndex];
         }
 
-        // 4. Close the modal
         function closeModal() {
             document.getElementById('photoModal').style.display = "none";
         }
 
-        // 5. Close modal if user clicks the dark background outside the image
         window.onclick = function(event) {
             let modal = document.getElementById('photoModal');
             if (event.target == modal) {
