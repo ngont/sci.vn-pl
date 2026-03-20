@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TTVB 2026 - Văn Bản & Thông Tin</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS riêng cho trang Văn bản để đồng bộ với index.html */
+        .page-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .page-header p {
+            font-size: 1.1rem;
+            color: #555;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .category-title {
+            color: #333;
+            border-bottom: 2px solid #ac1c2c;
+            display: inline-block;
+            padding-bottom: 5px;
+            margin-top: 30px;
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+        }
+
+        /* Tùy chỉnh Bullets cho danh sách Văn bản & Tin tức */
+        .document-list {
+            list-style: none;
+            padding-left: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .document-list li {
+            position: relative;
+            background: #fcfcfc;
+            padding: 20px 20px 20px 55px;
+            border-radius: 8px;
+            border: 1px solid #eee;
+            border-left: 4px solid #ac1c2c;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+        }
+
+        .document-list li:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 10px rgba(172, 28, 44, 0.1);
+            border-color: #f5d3d7;
+        }
+
+        /* Tạo Bullet (Dấu mũi tên đỏ) đồng bộ với phong cách index.html */
+        .document-list li::before {
+            content: "➔";
+            position: absolute;
+            left: 15px;
+            top: 22px;
+            color: #ffffff;
+            background-color: #ac1c2c;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        .document-list a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+            line-height: 1.5;
+            display: block;
+            transition: color 0.2s;
+        }
+
+        .document-list a:hover {
+            color: #ac1c2c;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">TTVB 2026</div>
+            <ul class="nav-links">
+                <li><a href="#">Trang Chủ</a></li>
+                <li><a href="#about">Mục Đích</a></li> 
+                <li><a href="#program">Chương Trình</a></li>
+                <li><a href="#speakers">Báo Cáo</a></li>
+                <li><a href="#organizers">Tổ Chức</a></li>
+                <li><a href="document.html">Văn Bản</a></li>
+                <li><a href="#photos">Tài Trợ</a></li> 
+                <li><a href="#contact">Liên Hệ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container" style="margin-top: 40px; margin-bottom: 40px;">
+        <section class="section">
+            <div class="page-header">
+                <h2>Văn Bản & Thông Tin</h2>
+                <p>Tổng hợp các văn bản và thông tin liên quan đến chính sách thu hút các nhà khoa học, chuyên gia người Việt Nam ở nước ngoài về đóng góp cho quê hương.</p>
+            </div>
+                        
+            <div class="program-day">
+                <h3 class="category-title">Quy Định & Văn Bản Chỉ Đạo</h3>
+                <ul class="document-list">
+                    <li>
+                        <a href="https://xaydungchinhsach.chinhphu.vn/toan-van-nghi-quyet-ve-dot-pha-phat-trien-khoa-hoc-cong-nghe-doi-moi-sang-tao-va-chuyen-doi-so-quoc-gia-119241224180048642.htm" target="_blank">
+                            TOÀN VĂN: Nghị quyết 57-NQ/TW về đột phá phát triển khoa học, công nghệ, đổi mới sáng tạo và chuyển đổi số quốc gia
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://vanban.chinhphu.vn/?pageid=27160&docid=199248" target="_blank">
+                            Nghị định số 27/2020/NĐ-CP của Chính phủ: Sửa đổi, bổ sung một số điều của Nghị định số 40/2014/NĐ-CP ngày 12 tháng 5 năm 2014
+                        </a>
+                    </li>
+                    <li>
+                        <a href="bo_khcn-bao_cao_hoan_thien_the_che.26.9.2025-1758883543285.pdf" target="_blank">
+                            BÁO CÁO: Kết quả tình hình hoàn thiện thể chế pháp lý liên quan đến phát triển khoa học công nghệ, đổi mới sáng tạo và chuyển đổi số
+                        </a>
+                    </li>
+                    <li>
+                        <a href="252BC_PHU_LUC-1758883543354.PDF" target="_blank">
+                            Phụ lục: Danh mục các văn bản pháp luật về khoa học, công nghệ, đổi mới sáng tạo
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="program-day" style="margin-top: 40px;">
+                <h3 class="category-title">Tin Tức & Báo Chí</h3>
+                <ul class="document-list">
+                    <li>
+                        <a href="https://baotintuc.vn/giao-duc/truong-dai-hoc-no-luc-thu-hut-chuyen-gia-gioi-la-nguoi-nuoc-ngoai-den-lam-viec-20260311081313944.htm" target="_blank">
+                            Trường Đại học nỗ lực thu hút chuyên gia giỏi là người nước ngoài đến làm việc
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; TTVB 2026 | <a href="https://pwr.edu.pl" target="_blank">WUST</a></p>
+    </footer>
+
+</body>
+</html>
