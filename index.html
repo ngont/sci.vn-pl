@@ -298,52 +298,66 @@
             <img class="modal-content" id="zoomedImg">
         </div>
 
-        <section id="contact" class="section">
+       <section id="contact" class="section">
             <h2>Liên Hệ & Đăng Ký</h2>
             
-            <div class="contact-container" style="background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); padding: 35px; margin-top: 20px; border-top: 4px solid #ac1c2c;">
+            <div class="contact-container" style="background: #fff; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.06); padding: 40px; margin-top: 20px; border-top: 4px solid #ac1c2c; display: flex; flex-direction: column; align-items: center;">
                 
-                <div class="contact-info" style="padding-right: 20px;">
-                    <h3 style="color: #ac1c2c; margin-bottom: 25px; font-size: 1.4rem;">Thông Tin Sự Kiện</h3>
+                <div style="display: flex; flex-wrap: wrap; width: 100%; gap: 30px; justify-content: space-between; margin-bottom: 30px;">
                     
-                    <div style="margin-bottom: 25px; line-height: 1.8;">
-                        <p style="font-size: 1.1rem; margin-bottom: 5px;">📍 <strong>Địa điểm tổ chức:</strong></p>
-                        <p style="color: #555; padding-left: 25px; font-size: 1.05rem;">
-                            Đại sứ quán Việt Nam tại Ba Lan<br>
-                            ul. Resorowa 36, 02-956 Warszawa
-                        </p>
+                    <div style="flex: 1; min-width: 300px;">
+                        
+                        <div style="background: #fdfdfd; border: 1px solid #eaeaea; border-left: 4px solid #ac1c2c; padding: 20px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: transform 0.2s;">
+                            <h3 style="color: #333; margin-top: 0; margin-bottom: 10px; font-size: 1.25rem; display: flex; align-items: center; gap: 10px;">
+                                <span style="font-size: 1.4rem;">📍</span> Địa Điểm Tổ Chức:
+                            </h3>
+                            <div style="color: #555; font-size: 1.05rem; line-height: 1.6; padding-left: 35px;">
+                                <strong style="color: #222;">Đại sứ quán Việt Nam tại Ba Lan</strong><br>
+                                ul. Resorowa 36, 02-956 Warszawa
+                            </div>
+                        </div>
+
+                        <div style="background: #fdfdfd; border: 1px solid #eaeaea; border-left: 4px solid #ac1c2c; padding: 20px; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.02); transition: transform 0.2s;">
+                            <h3 style="color: #333; margin-top: 0; margin-bottom: 10px; font-size: 1.25rem; display: flex; align-items: center; gap: 10px;">
+                                <span style="font-size: 1.4rem;">✉️</span> Thông Tin Hỗ Trợ:
+                            </h3>
+                            <div style="color: #555; font-size: 1.05rem; line-height: 1.8; padding-left: 35px;">
+                                <p style="margin: 0;">
+                                    <strong>Email 1:</strong> 
+                                    <a href="mailto:ngoc-thanh.nguyen@pwr.edu.pl" style="color: #ac1c2c; text-decoration: none; font-weight: 500;">ngoc-thanh.nguyen@pwr.edu.pl</a>
+                                </p>
+                                <p style="margin: 0; margin-top: 5px;">
+                                    <strong>Email 2:</strong> 
+                                    <a href="mailto:thanh-ngo.nguyen@pwr.edu.pl" style="color: #ac1c2c; text-decoration: none; font-weight: 500;">thanh-ngo.nguyen@pwr.edu.pl</a>
+                                </p>
+                            </div>
+                        </div>
+
                     </div>
-                    
-                    <div style="margin-bottom: 20px; line-height: 1.8;">
-                        <p style="font-size: 1.1rem; margin-bottom: 5px;">📞 <strong>Thông tin hỗ trợ:</strong></p>
-                        <p style="color: #555; padding-left: 25px; font-size: 1.05rem;">
-                            Email 1: ngoc-thanh.nguyen@pwr.edu.pl<br>
-                            Email 2: thanh-ngo.nguyen@pwr.edu.pl                            
-                        </p>
+
+                    <div style="flex: 1; min-width: 300px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); border: 1px solid #eee; display: flex;">
+                        <iframe 
+                            src="https://maps.google.com/maps?q=ul.%20Resorowa%2036,%2002-956%20Warszawa&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0; min-height: 250px;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
+
                 </div>
 
-                <div class="contact-form">
-                    <h3 style="color: #ac1c2c; margin-bottom: 25px; font-size: 1.4rem;">Đăng Ký Tham Dự</h3>
-                    <form action="#" method="POST">
-                        <div class="form-group">
-                            <label for="name" style="color: #333; font-weight: 600;">Họ và Tên <span style="color: red;">*</span></label>
-                            <input type="text" id="name" name="name" required placeholder="Nhập họ và tên của bạn" style="padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; outline-color: #ac1c2c;">
-                        </div>
-                        <div class="form-group">
-                            <label for="email" style="color: #333; font-weight: 600;">Địa chỉ Email <span style="color: red;">*</span></label>
-                            <input type="email" id="email" name="email" required placeholder="ví dụ: email@domain.com" style="padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; outline-color: #ac1c2c;">
-                        </div>
-                        <div class="form-group">
-                            <label for="message" style="color: #333; font-weight: 600;">Đơn vị công tác / Lời nhắn</label>
-                            <textarea id="message" name="message" placeholder="Vui lòng cho biết đơn vị công tác hoặc câu hỏi của bạn..." style="padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; outline-color: #ac1c2c;"></textarea>
-                        </div>
-                        <button type="submit" class="btn" style="background-color: #ac1c2c; color: #ffffff; padding: 14px 30px; border-radius: 5px; font-weight: bold; width: 100%; border: none; font-size: 1.1rem; box-shadow: 0 4px 10px rgba(172, 28, 44, 0.3); cursor: pointer; text-transform: uppercase; margin-top: 10px;">Gửi Đăng Ký</button>
-                    </form>
+                <div style="width: 100%; text-align: center; border-top: 1px solid #eee; padding-top: 30px;">
+                    <h3 style="color: #333; margin-bottom: 20px; font-size: 1.1rem; font-weight: normal;">Bạn chưa đăng ký tham dự sự kiện?</h3>
+                    <a href="LINK_GOOGLE_FORM_CUA_BAN" target="_blank" class="btn" style="display: inline-block; background-color: #ac1c2c; color: #ffffff; padding: 15px 40px; border-radius: 5px; font-weight: bold; font-size: 1.1rem; text-decoration: none; box-shadow: 0 4px 10px rgba(172, 28, 44, 0.3); text-transform: uppercase; transition: transform 0.2s;">
+                        Điền Form Đăng Ký Ngay
+                    </a>
                 </div>
+
             </div>
         </section>
-
     </main>
 
     <footer>
