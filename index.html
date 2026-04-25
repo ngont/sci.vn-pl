@@ -168,6 +168,205 @@
             font-size: 0.8rem;
             font-weight: bold;
         }
+
+        /* --- Program Section Styles (Redesigned) --- */
+        #program {
+            position: relative;
+        }
+        .program-intro {
+            text-align: center;
+            color: #666;
+            font-size: 1.05rem;
+            max-width: 720px;
+            margin: 0 auto 45px auto;
+            line-height: 1.7;
+        }
+        .program-part {
+            margin-bottom: 50px;
+            position: relative;
+        }
+        .part-header {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            margin-bottom: 30px;
+            padding-bottom: 18px;
+            border-bottom: 2px solid #f0e6e7;
+        }
+        .part-badge {
+            background: linear-gradient(135deg, #ac1c2c 0%, #d62b3f 100%);
+            color: #fff;
+            padding: 8px 18px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1.2px;
+            text-transform: uppercase;
+            box-shadow: 0 4px 12px rgba(172, 28, 44, 0.25);
+            white-space: nowrap;
+        }
+        .part-title {
+            color: #2c2c2c;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0;
+            line-height: 1.3;
+        }
+        .program-timeline {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: relative;
+        }
+        /* Vertical line of the timeline */
+        .program-timeline::before {
+            content: "";
+            position: absolute;
+            left: 27px;
+            top: 12px;
+            bottom: 12px;
+            width: 2px;
+            background: linear-gradient(to bottom, #ac1c2c 0%, #f0d4d8 100%);
+            border-radius: 2px;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 75px;
+            margin-bottom: 22px;
+        }
+        .timeline-item:last-child {
+            margin-bottom: 0;
+        }
+        .timeline-marker {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 56px;
+            height: 56px;
+            background: #fff;
+            border: 3px solid #ac1c2c;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            color: #ac1c2c;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 10px rgba(172, 28, 44, 0.15);
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+        .timeline-item:hover .timeline-marker {
+            background: #ac1c2c;
+            color: #fff;
+            transform: scale(1.05);
+            box-shadow: 0 6px 16px rgba(172, 28, 44, 0.35);
+        }
+        .timeline-card {
+            background: #ffffff;
+            padding: 22px 26px;
+            border-radius: 10px;
+            border: 1px solid #ececec;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        .timeline-card::before {
+            content: "";
+            position: absolute;
+            left: -10px;
+            top: 22px;
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-right: 10px solid #ffffff;
+            filter: drop-shadow(-2px 0 1px rgba(0,0,0,0.04));
+        }
+        .timeline-item:hover .timeline-card {
+            transform: translateX(4px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            border-color: #ac1c2c;
+        }
+        .timeline-topic {
+            display: block;
+            color: #1f1f1f;
+            font-size: 1.08rem;
+            font-weight: 600;
+            line-height: 1.55;
+            margin-bottom: 12px;
+        }
+        .timeline-speaker {
+            margin: 0;
+            color: #666;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding-top: 10px;
+            border-top: 1px dashed #eee;
+        }
+        .timeline-speaker .speaker-icon {
+            color: #ac1c2c;
+            font-size: 1.1rem;
+        }
+        .timeline-speaker .speaker-name {
+            font-weight: 500;
+            color: #444;
+        }
+
+        /* Highlighted "discussion" block for Phần 2 */
+        .program-highlight {
+            background: linear-gradient(135deg, #fcf4f5 0%, #fff 100%);
+            padding: 30px 32px;
+            border-radius: 10px;
+            border: 1px solid #f0d4d8;
+            border-left: 4px solid #ac1c2c;
+            box-shadow: 0 3px 10px rgba(172, 28, 44, 0.06);
+            position: relative;
+        }
+        .program-highlight .highlight-icon {
+            position: absolute;
+            top: -18px;
+            left: 28px;
+            background: #ac1c2c;
+            color: #fff;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 10px rgba(172, 28, 44, 0.3);
+        }
+        .program-highlight p {
+            margin: 0 0 12px 0;
+            color: #333;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+        .program-highlight p:last-child {
+            margin-bottom: 0;
+            color: #666;
+            font-style: italic;
+            font-size: 0.98rem;
+            padding-top: 12px;
+            border-top: 1px dashed #f0d4d8;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 600px) {
+            .part-header { flex-direction: column; align-items: flex-start; gap: 10px; }
+            .part-title { font-size: 1.25rem; }
+            .timeline-item { padding-left: 60px; }
+            .timeline-marker { width: 46px; height: 46px; font-size: 1rem; }
+            .program-timeline::before { left: 22px; }
+            .timeline-card { padding: 18px; }
+            .timeline-card::before { display: none; }
+            .timeline-topic { font-size: 1rem; }
+            .program-highlight { padding: 25px 20px; }
+        }
     </style>
 </head>
 <body>
@@ -218,15 +417,97 @@
                     <li><strong>Cập nhật thông tin:</strong> Lắng nghe chia sẻ về những chính sách đãi ngộ, thu hút nhân tài mới nhất từ Việt Nam.</li>
                     <li><strong>Kết nối cơ hội:</strong> Tìm hiểu các dự án trọng điểm quốc gia đang cần nguồn lực chuyên gia, mở ra cơ hội hợp tác nghiên cứu, chuyển giao công nghệ hoặc đầu tư.</li>
                     <li><strong>Chia sẻ góc nhìn:</strong> Trao đổi kinh nghiệm của các nhà khoa hoc, doanh nghiệp, các đề xuất với Chính phủ.</li>
-                    <li><strong>Chính sách hợp tác:</strong> Một số chính sách hợp tác Việt Nam - Ba Lan về KHCN và Đào tạo hiện nay.</li>
+                    <li><strong>Chính sách hợp tác:</strong> Một số chính sách hợp tác Việt Nam - Ba Lan về KHCN và đào tạo hiện nay.</li>
                 </ul>
             </div>
         </section>
 
         <section id="program" class="section">
             <h2>Chương Trình</h2>
-            <p>Đang cập nhật ...</p>           
-            
+
+            <p class="program-intro">
+                Chương trình hội thảo gồm hai phần chính, tập trung vào việc giới thiệu
+                các chính sách mới của Việt Nam và mở diễn đàn trao đổi giữa các nhà khoa học,
+                chuyên gia người Việt tại Ba Lan.
+            </p>
+
+            <div class="program-part">
+                <div class="part-header">
+                    <span class="part-badge">Phần 1</span>
+                    <h3 class="part-title">Chính sách &amp; Cơ hội hợp tác</h3>
+                </div>
+
+                <ul class="program-timeline">
+                    <li class="timeline-item">
+                        <div class="timeline-marker">01</div>
+                        <div class="timeline-card">
+                            <span class="timeline-topic">
+                                Các quy định tạo điều kiện để nhà khoa học Việt Nam đang làm việc ở nước ngoài tham gia làm chủ nhiệm hoặc thành viên đề tài của Nafosted
+                            </span>
+                            <p class="timeline-speaker">
+                                <span class="speaker-icon">🎙️</span>
+                                <span><span class="speaker-name">Diễn giả:</span> Đại diện Quỹ Nafosted</span>
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="timeline-item">
+                        <div class="timeline-marker">02</div>
+                        <div class="timeline-card">
+                            <span class="timeline-topic">
+                                Các chương trình của Đại học Bách Khoa Hà Nội dành cho các nhà khoa học Việt Nam đang làm việc ở nước ngoài hợp tác giảng dạy và nghiên cứu
+                            </span>
+                            <p class="timeline-speaker">
+                                <span class="speaker-icon">🎙️</span>
+                                <span><span class="speaker-name">Diễn giả:</span> Trưởng ban Hợp tác Quốc tế (ĐHBK HN)</span>
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="timeline-item">
+                        <div class="timeline-marker">03</div>
+                        <div class="timeline-card">
+                            <span class="timeline-topic">
+                                Các chính sách của Nhà nước tạo cơ hội cho các nhà khoa học Việt Nam đang làm việc ở nước ngoài tham gia nghiên cứu và giảng dạy ở Việt Nam
+                            </span>
+                            <p class="timeline-speaker">
+                                <span class="speaker-icon">🎙️</span>
+                                <span><span class="speaker-name">Diễn giả:</span> Đại diện của Ủy ban Nhà nước về người Việt Nam ở nước ngoài</span>
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="timeline-item">
+                        <div class="timeline-marker">04</div>
+                        <div class="timeline-card">
+                            <span class="timeline-topic">
+                                Các chương trình song phương của Việt Nam và Ba Lan trong trao đổi công nghệ, hợp tác nghiên cứu, giảng dạy và đào tạo &mdash; tình hình hiện tại và các đề xuất cho tương lai
+                            </span>
+                            <p class="timeline-speaker">
+                                <span class="speaker-icon">🎙️</span>
+                                <span><span class="speaker-name">Diễn giả:</span> Đại sứ Hà Hoàng Hải</span>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="program-part">
+                <div class="part-header">
+                    <span class="part-badge">Phần 2</span>
+                    <h3 class="part-title">Trao đổi &amp; Tham luận</h3>
+                </div>
+
+                <div class="program-highlight">
+                    
+                    <p>
+                        <strong>Các tham luận của các nhà Khoa học người Việt tại Ba Lan
+                        về kinh nghiệm hợp tác khoa học giữa Việt Nam và châu Âu</strong>
+                    </p>
+                    <span class="speaker-icon">🎙️</span>
+                    <span>Phần này sẽ là cơ hội để mở rộng thảo luận, giải đáp thắc mắc và kết nối giữa các chuyên gia.</span>                   
+                </div>
+            </div>
         </section>
 
         <section id="speakers" class="section">
