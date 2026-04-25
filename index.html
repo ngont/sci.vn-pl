@@ -367,6 +367,111 @@
             .timeline-topic { font-size: 1rem; }
             .program-highlight { padding: 25px 20px; }
         }
+
+        /* --- Modern Schedule Styles --- */
+        .modern-schedule {
+            margin-top: 60px;
+            background: #ffffff;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.06);
+            overflow: hidden;
+            border: 1px solid #f0eaeb;
+        }
+        .schedule-header {
+            background: linear-gradient(135deg, #ac1c2c 0%, #d62b3f 100%);
+            color: #ffffff;
+            padding: 20px 30px;
+            font-size: 1.25rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            letter-spacing: 0.5px;
+        }
+        .schedule-header span {
+            font-size: 1.5rem;
+        }
+        .schedule-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .schedule-item {
+            display: flex;
+            align-items: center;
+            padding: 25px 30px;
+            border-bottom: 1px solid #f0eaeb;
+            transition: background 0.3s ease;
+        }
+        .schedule-item:last-child {
+            border-bottom: none;
+        }
+        .schedule-item:hover {
+            background: #fdfcfc;
+        }
+        
+        .schedule-time-box {
+            background: #fcf4f5;
+            color: #ac1c2c;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            min-width: 170px;
+            text-align: center;
+            border: 1px solid #fadbdc;
+            margin-right: 30px;
+            flex-shrink: 0;
+            box-shadow: inset 0 2px 4px rgba(172, 28, 44, 0.03);
+        }
+        
+        .schedule-info {
+            flex-grow: 1;
+        }
+        .schedule-title {
+            display: block;
+            font-size: 1.15rem;
+            color: #222;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .schedule-desc {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+        }
+        .schedule-icon-wrap {
+            font-size: 1.8rem;
+            margin-left: 20px;
+            opacity: 0.9;
+            background: #fff;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        @media (max-width: 768px) {
+            .schedule-item {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 20px;
+            }
+            .schedule-time-box {
+                margin-right: 0;
+                margin-bottom: 15px;
+                width: auto;
+                display: inline-block;
+                font-size: 1rem;
+            }
+            .schedule-icon-wrap {
+                display: none; /* Ẩn icon trên mobile cho gọn */
+            }
+        }
+        
     </style>
 </head>
 <body>
@@ -377,8 +482,7 @@
             <ul class="nav-links">
                 <li><a href="#">Trang Chủ</a></li>
                 <li><a href="#about">Mục Đích</a></li> 
-                <li><a href="#program">Chương Trình</a></li>
-                <li><a href="#speakers">Báo Cáo</a></li>
+                <li><a href="#program">Chương Trình</a></li>                
                 <li><a href="#organizers">Tổ Chức</a></li>
                 <li><a href="document.html">Văn Bản</a></li>                
                 <li><a href="#contact">Liên Hệ</a></li>
@@ -437,35 +541,22 @@
                     <h3 class="part-title">Chính sách &amp; Cơ hội hợp tác</h3>
                 </div>
 
-                <ul class="program-timeline">
+               <ul class="program-timeline">
                     <li class="timeline-item">
                         <div class="timeline-marker">01</div>
                         <div class="timeline-card">
                             <span class="timeline-topic">
-                                Các quy định tạo điều kiện để nhà khoa học Việt Nam đang làm việc ở nước ngoài tham gia làm chủ nhiệm hoặc thành viên đề tài của Nafosted
+                                Các chương trình song phương của Việt Nam và Ba Lan trong trao đổi công nghệ, hợp tác nghiên cứu, giảng dạy và đào tạo — tình hình hiện tại và các đề xuất cho tương lai
                             </span>
                             <p class="timeline-speaker">
                                 <span class="speaker-icon">🎙️</span>
-                                <span><span class="speaker-name">Diễn giả:</span> Đại diện Quỹ Nafosted</span>
+                                <span><span class="speaker-name">Diễn giả:</span> Đại sứ Hà Hoàng Hải</span>
                             </p>
                         </div>
                     </li>
 
                     <li class="timeline-item">
                         <div class="timeline-marker">02</div>
-                        <div class="timeline-card">
-                            <span class="timeline-topic">
-                                Các chương trình của Đại học Bách Khoa Hà Nội dành cho các nhà khoa học Việt Nam đang làm việc ở nước ngoài hợp tác giảng dạy và nghiên cứu
-                            </span>
-                            <p class="timeline-speaker">
-                                <span class="speaker-icon">🎙️</span>
-                                <span><span class="speaker-name">Diễn giả:</span> Trưởng ban Hợp tác Quốc tế (ĐHBK HN)</span>
-                            </p>
-                        </div>
-                    </li>
-
-                    <li class="timeline-item">
-                        <div class="timeline-marker">03</div>
                         <div class="timeline-card">
                             <span class="timeline-topic">
                                 Các chính sách của Nhà nước tạo cơ hội cho các nhà khoa học Việt Nam đang làm việc ở nước ngoài tham gia nghiên cứu và giảng dạy ở Việt Nam
@@ -478,14 +569,27 @@
                     </li>
 
                     <li class="timeline-item">
-                        <div class="timeline-marker">04</div>
+                        <div class="timeline-marker">03</div>
                         <div class="timeline-card">
                             <span class="timeline-topic">
-                                Các chương trình song phương của Việt Nam và Ba Lan trong trao đổi công nghệ, hợp tác nghiên cứu, giảng dạy và đào tạo &mdash; tình hình hiện tại và các đề xuất cho tương lai
+                                Các quy định tạo điều kiện để nhà khoa học Việt Nam đang làm việc ở nước ngoài tham gia làm chủ nhiệm hoặc thành viên đề tài của Nafosted
                             </span>
                             <p class="timeline-speaker">
                                 <span class="speaker-icon">🎙️</span>
-                                <span><span class="speaker-name">Diễn giả:</span> Đại sứ Hà Hoàng Hải</span>
+                                <span><span class="speaker-name">Diễn giả:</span> Đại diện Quỹ Nafosted</span>
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="timeline-item">
+                        <div class="timeline-marker">04</div>
+                        <div class="timeline-card">
+                            <span class="timeline-topic">
+                                Các chương trình của Đại học Bách Khoa Hà Nội dành cho các nhà khoa học Việt Nam đang làm việc ở nước ngoài hợp tác giảng dạy và nghiên cứu
+                            </span>
+                            <p class="timeline-speaker">
+                                <span class="speaker-icon">🎙️</span>
+                                <span><span class="speaker-name">Diễn giả:</span> Trưởng ban Hợp tác Quốc tế (ĐHBK HN)</span>
                             </p>
                         </div>
                     </li>
@@ -505,17 +609,52 @@
                         về kinh nghiệm hợp tác khoa học giữa Việt Nam và châu Âu</strong>
                     </p>
                     <span class="speaker-icon">🎙️</span>
-                    <span>Phần này sẽ là cơ hội để mở rộng thảo luận, giải đáp thắc mắc và kết nối giữa các chuyên gia.</span>                   
+                    <span> Phần này sẽ là cơ hội để mở rộng thảo luận, giải đáp thắc mắc và kết nối giữa các chuyên gia.</span>                   
                 </div>
             </div>
-        </section>
-
-        <section id="speakers" class="section">
-            <h2>Keynote Speakers</h2>
-            <p>Đang cập nhật ...</p>            
             
-        </section>
+            <div class="modern-schedule">
+                <div class="schedule-header">
+                    <span>🕒</span> Khung Thời Gian Của Chương Trình
+                </div>
+                <ul class="schedule-list">
+                    <li class="schedule-item">
+                        <div class="schedule-time-box">11:00 - 12:30</div>
+                        <div class="schedule-info">
+                            <span class="schedule-title">Phần 1: Chính sách & Cơ hội hợp tác</span>
+                            <span class="schedule-desc">Lắng nghe các bài báo cáo, trình bày từ đại diện tổ chức và cập nhật chính sách.</span>
+                        </div>
+                        <div class="schedule-icon-wrap">🎙️</div>
+                    </li>
+                    <li class="schedule-item">
+                        <div class="schedule-time-box">12:30 - 12:50</div>
+                        <div class="schedule-info">
+                            <span class="schedule-title">Nghỉ giải lao (Coffee break)</span>
+                            <span class="schedule-desc">Dùng trà, cà phê nhẹ và giao lưu tự do giữa các khách mời.</span>
+                        </div>
+                        <div class="schedule-icon-wrap">☕</div>
+                    </li>
+                    <li class="schedule-item">
+                        <div class="schedule-time-box">12:50 - 14:00</div>
+                        <div class="schedule-info">
+                            <span class="schedule-title">Phần 2: Trao đổi & Tham luận</span>
+                            <span class="schedule-desc">Thảo luận mở, chia sẻ kinh nghiệm, giải đáp thắc mắc và kết nối hợp tác.</span>
+                        </div>
+                        <div class="schedule-icon-wrap">💬</div>
+                    </li>
+                    <li class="schedule-item">
+                        <div class="schedule-time-box">14:00 - 15:00</div>
+                        <div class="schedule-info">
+                            <span class="schedule-title">Bữa trưa giao lưu (Kết thúc)</span>
+                            <span class="schedule-desc">Bữa trưa thân mật, tổng kết và bế mạc chương trình hội thảo.</span>
+                        </div>
+                        <div class="schedule-icon-wrap">🍽️</div>
+                    </li>
+                </ul>
+            </div>
 
+        </section>
+        
         <section id="organizers" class="section">
             <h2>Ban Tổ Chức & Điều Hành</h2>
             
@@ -539,7 +678,7 @@
             </div>
 
             <div class="committee-section" style="margin-top: 50px;">
-                <h3 style="text-align: center; font-size: 1.5rem; margin-bottom: 40px; border-left: none; color: #333;">Các Đơn Vị Tổ Chức</h3>
+                <h3 style="text-align: center; font-size: 1.5rem; margin-bottom: 40px; border-left: none; color: #333;">Các Đơn Vị Đồng Tổ Chức</h3>
                 <div class="partners-grid">
                     
                     <div class="partner-box">
