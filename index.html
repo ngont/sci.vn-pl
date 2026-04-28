@@ -189,6 +189,47 @@
             margin-left: auto;
             margin-right: auto;
         }
+
+       /* --- Free Notice Badge (Clickable) --- */
+        .free-notice-wrapper {
+            text-align: center;
+            margin-bottom: 45px;
+            margin-top: -20px; 
+        }
+        .free-notice {
+            display: inline-flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            background-color: #fcf4f5;
+            color: #ac1c2c;
+            padding: 10px 15px 10px 25px;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            border: 1px solid #fadbdc;
+            box-shadow: 0 4px 12px rgba(172, 28, 44, 0.08);
+            text-decoration: none; /* Bỏ gạch chân của link */
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .free-notice:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(172, 28, 44, 0.15);
+        }
+        .click-cta {
+            background-color: #ac1c2c;
+            color: #ffffff;
+            padding: 6px 16px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            margin-left: 5px;
+            box-shadow: 0 2px 6px rgba(172, 28, 44, 0.2);
+            transition: background-color 0.2s ease;
+        }
+        .free-notice:hover .click-cta {
+            background-color: #d62b3f; /* Sáng màu lên khi rê chuột */
+        }
         
         /* Main vertical timeline line */
         .integrated-program::before {
@@ -489,11 +530,18 @@
         <section id="program" class="section">
             <h2>Chương Trình</h2>
 
-            <p class="program-intro">
+            <p class="program-intro" style="margin-bottom: 25px;">
                 Chương trình hội thảo gồm hai phần chính, tập trung vào việc giới thiệu
                 các chính sách mới của Việt Nam và mở diễn đàn trao đổi giữa các nhà khoa học,
                 chuyên gia người Việt tại Ba Lan.
             </p>
+            
+            <div class="free-notice-wrapper">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSdq7zv__VwEsxGgoBQY8EOfeKoRWkLf_nn9k9Pm5etBAqJqLw/viewform?usp=sharing" target="_blank" class="free-notice">
+                    <span>🎟️</span> Việc tham dự hội thảo hoàn toàn miễn phí. Mọi chi phí do ĐSQ tài trợ.
+                    <span class="click-cta">👉 Click để đăng ký!</span>
+                </a>
+            </div>
 
             <div class="integrated-program">
                 
