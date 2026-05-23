@@ -465,7 +465,7 @@
             margin: 0;
         }
 
-        /* Program Timeline (Inner List for Phần 1) */
+        /* Program Timeline (Inner List for Phần 1 & Phần 2) */
         .program-timeline {
             list-style: none;
             padding: 0;
@@ -532,15 +532,32 @@
             margin-bottom: 10px;
         }
 
+        /* Đồng bộ hàng tuyệt đối cho Micro và text */
         .timeline-speaker {
             margin: 0;
             color: #666;
             font-size: 0.95rem;
-            display: flex;
-            align-items: center;
+            display: inline-flex;
+            align-items: flex-start; /* Giữ icon ở dòng đầu khi text xuống hàng */
             gap: 8px;
             padding-top: 10px;
             border-top: 1px dashed #eee;
+            width: 100%;
+        }
+
+        .timeline-speaker .speaker-icon {
+            font-size: 1.1rem;
+            color: #ac1c2c;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1.3;
+        }
+
+        .timeline-speaker .speaker-text-wrapper {
+            display: inline-block;
+            flex: 1;
+            line-height: 1.5;
         }
 
         .timeline-speaker .speaker-name {
@@ -548,20 +565,36 @@
             color: #444;
         }
 
-        /* Highlighted Box (For Phần 2) */
+        /* Sub-info block for extra titles under speaker names */
+        .speaker-info-block {
+            display: block;
+            font-size: 0.85rem;
+            color: #777;
+            margin-top: 4px;
+            line-height: 1.4;
+        }
+
+        /* CHỈNH SỬA TẠI ĐÂY: Thêm class in nghiêng cho các diễn giả đặc biệt */
+        .speaker-info-block.italic-title {
+            font-style: italic;
+            color: #555; /* Đậm màu hơn một chút cho tiêu đề in nghiêng nổi bật */
+        }
+
+        /* Highlighted Box (For Section Intro / Summaries) */
         .program-highlight {
-            background: #fff;
-            padding: 25px 30px;
-            border-radius: 10px;
-            border: 1px solid #f0d4d8;
+            background: #fff9f9;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border: 1px solid #f2dede;
             border-left: 4px solid #ac1c2c;
-            box-shadow: 0 3px 10px rgba(172, 28, 44, 0.05);
+            box-shadow: 0 2px 6px rgba(172, 28, 44, 0.03);
+            margin-bottom: 25px;
         }
 
         .program-highlight p {
-            margin: 0 0 10px 0;
-            color: #222;
-            font-size: 1.05rem;
+            margin: 0;
+            color: #333;
+            font-size: 1.02rem;
             line-height: 1.6;
         }
 
@@ -678,7 +711,7 @@
 
             <p>Việt Nam đang bước vào một kỷ nguyên chuyển mình mạnh mẽ, nơi Khoa học Công nghệ và Đổi mới sáng tạo được
                 xem là "chìa khóa vàng", là động lực quan trọng nhất để thúc đẩy tăng trưởng GDP và đưa đất nước phát
-                triển bền vững. Để hiện thực hóa tầm nhìn đó, Nhà nước đang có nhiều chính sách mời gọi nhân tài.</p>
+                triển bền vững. Để hiện thực hóa tầm nhìn đó, Nhà nước đang có many chính sách mời gọi nhân tài.</p>
 
             <p>Hàng loạt chính sách đột phá, những ưu đãi hấp dẫn cùng môi trường nghiên cứu ngày càng cởi mở đã được
                 ban hành với mục tiêu duy nhất: Thu hút và tạo không gian phát triển tốt nhất cho các nhà khoa học,
@@ -749,7 +782,7 @@
                                     </span>
                                     <p class="timeline-speaker">
                                         <span class="speaker-icon">🎙️</span>
-                                        <span><span class="speaker-name">Diễn giả:</span> Đại sứ Hà Hoàng Hải</span>
+                                        <span class="speaker-text-wrapper"><span class="speaker-name">Diễn giả:</span> Đại sứ Hà Hoàng Hải</span>
                                     </p>
                                 </div>
                             </li>
@@ -763,7 +796,7 @@
                                     </span>
                                     <p class="timeline-speaker">
                                         <span class="speaker-icon">🎙️</span>
-                                        <span><span class="speaker-name">Diễn giả:</span> Đại diện của Ủy ban Nhà nước
+                                        <span class="speaker-text-wrapper"><span class="speaker-name">Diễn giả:</span> Đại diện của Ủy ban Nhà nước
                                             về người Việt Nam ở nước ngoài</span>
                                     </p>
                                 </div>
@@ -779,7 +812,7 @@
                                     </span>
                                     <p class="timeline-speaker">
                                         <span class="speaker-icon">🎙️</span>
-                                        <span><span class="speaker-name">Diễn giả:</span> Đại diện lãnh đạo Vụ Hợp tác
+                                        <span class="speaker-text-wrapper"><span class="speaker-name">Diễn giả:</span> Đại diện lãnh đạo Vụ Hợp tác
                                             Quốc tế, Bộ Khoa học và Công nghệ</span>
                                     </p>
                                 </div>
@@ -796,7 +829,7 @@
                                     </span>
                                     <p class="timeline-speaker">
                                         <span class="speaker-icon">🎙️</span>
-                                        <span><span class="speaker-name">Diễn giả:</span> PGS. TS. Đào Ngọc Chiến, Giám
+                                        <span class="speaker-text-wrapper"><span class="speaker-name">Diễn giả:</span> PGS. TS. Đào Ngọc Chiến, Giám
                                             đốc Quỹ Nafosted</span>
                                     </p>
                                 </div>
@@ -811,7 +844,7 @@
                                     </span>
                                     <p class="timeline-speaker">
                                         <span class="speaker-icon">🎙️</span>
-                                        <span><span class="speaker-name">Diễn giả:</span> PGS. TS. Nguyễn Đắc Trung,
+                                        <span class="speaker-text-wrapper"><span class="speaker-name">Diễn giả:</span> PGS. TS. Nguyễn Đắc Trung,
                                             Trưởng ban Hợp tác Quốc tế, ĐHBK Hà Nội</span>
                                     </p>
                                 </div>
@@ -836,85 +869,126 @@
                 </div>
 
                 <div class="session-block">
-                    <div class="session-time">
-                        <span class="time-text">12:50 - 14:00</span>
-                    </div>
-                    <div class="session-details">
-                        <div class="part-header">
-                            <span class="part-badge">Phần 2</span>
-                            <h3 class="part-title">Trao đổi & Tham luận</h3>
+                        <div class="session-time">
+                            <span class="time-text">12:50 - 14:00</span>
                         </div>
+                        <div class="session-details">
+                            <div class="part-header">
+                                <span class="part-badge">Phần 2</span>
+                                <h3 class="part-title">Báo cáo tham luận — Chia sẻ góc nhìn thực tiễn</h3>
+                            </div>
 
-                        <div class="program-highlight">
-                            <p
-                                style="margin-bottom: 20px; font-size: 1.1rem; border-bottom: 1px dashed #f0d4d8; padding-bottom: 15px;">
-                                <strong>Các tham luận của các nhà khoa học và doanh nghiệp về kinh nghiệm hợp tác R&D
-                                    giữa Việt Nam và châu Âu</strong>
-                                <br>
-                                <span style="font-size: 0.95rem; color: #ac1c2c; font-style: italic;">(to be
-                                    updated)</span>
-                            </p>
+                            <div class="program-highlight">
+                                <p><strong>💡 Nội dung tổng quan:</strong> Các tham luận của các nhà khoa học và doanh nghiệp về kinh nghiệm hợp tác R&D giữa Việt Nam và châu Âu <span style="color: #ac1c2c; font-style: italic; font-size: 0.9rem;">(to be updated)</span></p>
+                            </div>
 
-                            <ol
-                                style="padding-left: 25px; margin: 0; line-height: 1.6; color: #333; font-size: 1.05rem;">
-
-                                <li style="margin-bottom: 18px; padding-left: 5px;">
-                                    <strong style="color: #222;">GS. TSKH. Mai Xuân Lý</strong> <span
-                                        style="color: #555;">– Viện Vật lý, Viện Hàn lâm Khoa học Ba Lan (PAN)</span>
-                                    <div style="font-size: 0.95rem; color: #ac1c2c; margin-top: 4px;">
-                                        <em>Chủ tịch Hội KHCN Việt Nam tại Ba Lan</em>
+                            <ul class="program-timeline">
+                                <li class="timeline-item">
+                                    <div class="timeline-marker">01</div>
+                                    <div class="timeline-card">
+                                        <span class="timeline-topic">Vai trò Hội KH&CN Việt Nam–Ba Lan trong cầu nối nghiên cứu khoa học giữa hai nước</span>
+                                        <p class="timeline-speaker">
+                                            <span class="speaker-icon">🎙️</span>
+                                            <span class="speaker-text-wrapper">
+                                                <span class="speaker-name">Diễn giả:</span> GS. Mai Xuân Lý, Viện Vật Lý PAN, Warszawa
+                                                <span class="committee-section"><span class="speaker-info-block italic-title">Chủ tịch Hội KH&CN Việt Nam tại Ba Lan</span></span>
+                                            </span>
+                                        </p>
                                     </div>
                                 </li>
-
-                                <li style="margin-bottom: 18px; padding-left: 5px;">
-                                    <strong style="color: #222;">GS. TSKH. Nguyễn Ngọc Thành</strong> <span
-                                        style="color: #555;">– Đại học Bách khoa Wrocław</span>
-                                    <div style="font-size: 0.95rem; color: #ac1c2c; margin-top: 4px;">
-                                        <em>Thành viên Hội đồng Giáo sư nhà nước Ba Lan</em><br>
-                                        <em>Thành viên Hội đồng Tin học - Viện Hàn lâm Khoa học Ba Lan (PAN)</em>
+                                <li class="timeline-item">
+                                    <div class="timeline-marker">02</div>
+                                    <div class="timeline-card">
+                                        <span class="timeline-topic">Kinh nghiệm xây dựng dự án hợp tác giữa Đại học AGH và các trường đại học Việt Nam</span>
+                                        <p class="timeline-speaker">
+                                            <span class="speaker-icon">🎙️</span>
+                                            <span class="speaker-text-wrapper">
+                                                <span class="speaker-name">Diễn giả:</span> GS AGH. Đào Bá Phong, Đại học AGH, Ba Lan
+                                                <span class="speaker-info-block italic-title">Phó Chủ tịch Hội KH&CN Việt Nam tại Ba Lan</span>
+                                            </span>
+                                        </p>
                                     </div>
                                 </li>
-
-                                <li style="margin-bottom: 18px; padding-left: 5px;">
-                                    <strong style="color: #222;">TSKH. GS AGH. Đào Bá Phong</strong> <span
-                                        style="color: #555;">– Đại học AGH Kraków</span>
-                                    <div style="font-size: 0.95rem; color: #ac1c2c; margin-top: 4px;">
-                                        <em>Phó Chủ tịch Hội KHCN Việt Nam tại Ba Lan</em>
+                                <li class="timeline-item">
+                                    <div class="timeline-marker">03</div>
+                                    <div class="timeline-card">
+                                        <span class="timeline-topic">Lực lượng KH Việt Nam tại Na Uy & các chương trình hợp tác khoa học do Na Uy tài trợ</span>
+                                        <p class="timeline-speaker">
+                                            <span class="speaker-icon">🎙️</span>
+                                            <span class="speaker-text-wrapper"><span class="speaker-name">Diễn giả:</span> GS. Hà Hoài Phương, The Arctic University of Norway, Na Uy</span>
+                                        </p>
                                     </div>
                                 </li>
-
-                                <li style="margin-bottom: 18px; padding-left: 5px;">
-                                    <strong style="color: #222;">TSKH. GS UW. Nguyễn Hùng Sơn</strong> <span
-                                        style="color: #555;">– Đại học Tổng hợp Warsaw</span>
-                                </li>
-
-                                <li style="margin-bottom: 18px; padding-left: 5px;">
-                                    <strong style="color: #222;">GS. Hà Hoài Phương</strong> <span
-                                        style="color: #555;">– UiT The Arctic University of Norway, Na Uy</span>
-                                </li>
-
-                                <li style="margin-bottom: 18px; padding-left: 5px;">
-                                    <strong style="color: #222;">TSKH. GS UW. Nguyễn Anh Linh</strong> <span
-                                        style="color: #555;">– Đại học Tổng hợp Warsaw</span>
-                                </li>
-
-                                <li style="margin-bottom: 18px; padding-left: 5px;">
-                                    <strong style="color: #222;">TS. Nguyễn Quốc Cường</strong> <span
-                                        style="color: #555;">– Hội KHCN Việt Nam tại Ba Lan</span>
-                                </li>
-
-                                <li style="margin-bottom: 0; padding-left: 5px;">
-                                    <strong style="color: #222;">Ông Trần Trọng Hùng</strong> <span
-                                        style="color: #555;">– Hội Doanh nghiệp Việt Nam tại Ba Lan</span>
-                                    <div style="font-size: 0.95rem; color: #ac1c2c; margin-top: 4px;">
-                                        <em>Chủ tịch Hội Doanh nghiệp Việt Nam tại Ba Lan</em>
+                                <li class="timeline-item">
+                                    <div class="timeline-marker">04</div>
+                                    <div class="timeline-card">
+                                        <span class="timeline-topic">Tiềm năng hợp tác phát triển Trí tuệ nhân tạo giữa Ba Lan và Việt Nam</span>
+                                        <p class="timeline-speaker">
+                                            <span class="speaker-icon">🎙️</span>
+                                            <span class="speaker-text-wrapper"><span class="speaker-name">Diễn giả:</span> GS UW. Nguyễn Hùng Sơn, Đại học Warsaw, Ba Lan</span>
+                                        </p>
                                     </div>
                                 </li>
-
-                            </ol>
+                                <li class="timeline-item">
+                                    <div class="timeline-marker">05</div>
+                                    <div class="timeline-card">
+                                        <span class="timeline-topic">Kinh nghiệm hợp tác khoa học & giảng dạy ngành Khoa học Máy tính tại Việt Nam</span>
+                                        <p class="timeline-speaker">
+                                            <span class="speaker-icon">🎙️</span>
+                                            <span class="speaker-text-wrapper"><span class="speaker-name">Diễn giả:</span> GS UW. Nguyễn Anh Linh, Đại học Warsaw, Ba Lan</span>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="timeline-item">
+                                    <div class="timeline-marker">06</div>
+                                    <div class="timeline-card">
+                                        <span class="timeline-topic">Khả năng chuyển giao công nghệ từ các đề án châu Âu sang Việt Nam</span>
+                                        <p class="timeline-speaker">
+                                            <span class="speaker-icon">🎙️</span>
+                                            <span class="speaker-text-wrapper"><span class="speaker-name">Diễn giả:</span> TS. Cao Tuấn Vũ, Viện Nghiên cứu Không khí Na Uy (NILU)</span>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="timeline-item">
+                                    <div class="timeline-marker">07</div>
+                                    <div class="timeline-card">
+                                        <span class="timeline-topic">Hợp tác khoa học Việt Nam–Ba Lan trong lĩnh vực Địa chất</span>
+                                        <p class="timeline-speaker">
+                                            <span class="speaker-icon">🎙️</span>
+                                            <span class="speaker-text-wrapper"><span class="speaker-name">Diễn giả:</span> TS. Nguyễn Quốc Cường, Hội KH&CN Việt Nam–Ba Lan</span>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="timeline-item">
+                                    <div class="timeline-marker">08</div>
+                                    <div class="timeline-card">
+                                        <span class="timeline-topic">Ứng dụng KH&CN nâng cao năng lực cạnh tranh của doanh nghiệp Việt tại Ba Lan</span>
+                                        <p class="timeline-speaker">
+                                            <span class="speaker-icon">🎙️</span>
+                                            <span class="speaker-text-wrapper">
+                                                <span class="speaker-name">Diễn giả:</span> Ông Trần Trọng Hùng, Hội Doanh nghiệp Việt Nam tại Ba Lan
+                                                <span class="speaker-info-block italic-title">Chủ tịch Hội Doanh nghiệp Việt Nam tại Ba Lan</span>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="timeline-item">
+                                    <div class="timeline-marker">09</div>
+                                    <div class="timeline-card">
+                                        <span class="timeline-topic">Thảo luận về một số trọng tâm trong công cuộc phát triển KHCN ở Việt Nam</span>
+                                        <p class="timeline-speaker">
+                                            <span class="speaker-icon">🎙️</span>
+                                            <span class="speaker-text-wrapper">
+                                                <span class="speaker-name">Diễn giả:</span> GS. Nguyễn Ngọc Thành, Đại học Bách khoa Wrocław, Ba Lan
+                                                <span class="speaker-info-block italic-title">Thành viên Hội đồng Giáo sư nhà nước Ba Lan</span>
+                                                <span class="speaker-info-block italic-title">Thành viên Hội đồng Tin học, Viện Hàn lâm Khoa học Ba Lan (PAN)</span>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
                     </div>
-                </div>
 
                 <div class="session-block">
                     <div class="session-time">
@@ -978,7 +1052,6 @@
                     Các Đơn Vị Đồng Tổ Chức</h3>
                 <div class="partners-grid" style="align-items: stretch;">
 
-                    <!-- Đối tác 1 -->
                     <div class="partner-box"
                         style="display: flex; flex-direction: column; justify-content: flex-start; box-sizing: border-box;">
                         <a href="https://vietnam.pl" target="_blank"
@@ -993,7 +1066,6 @@
                         </a>
                     </div>
 
-                    <!-- Đối tác 2 -->
                     <div class="partner-box"
                         style="display: flex; flex-direction: column; justify-content: flex-start; box-sizing: border-box;">
                         <div
@@ -1005,7 +1077,6 @@
                         </div>
                     </div>
 
-                    <!-- Đối tác 3 -->
                     <div class="partner-box"
                         style="display: flex; flex-direction: column; justify-content: flex-start; box-sizing: border-box;">
                         <div
@@ -1017,14 +1088,12 @@
                             tại Ba Lan</div>
                     </div>
 
-                    <!-- Đối tác 4 -->
                     <div class="partner-box"
                         style="display: flex; flex-direction: column; justify-content: flex-start; box-sizing: border-box;">
                         <a href="#" target="_blank"
                             style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
                             <div
                                 style="height: 120px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px;">
-                                <!-- Thay tên file ảnh tại thuộc tính src cho khớp với file bạn đã lưu -->
                                 <img src="HNVBL.jpg" alt="Hội người Việt Nam tại Ba Lan"
                                     style="max-height: 120px; width: auto; object-fit: contain;">
                             </div>
@@ -1037,10 +1106,10 @@
         </section>
 
         <div id="photoModal" class="modal">
-            <span class="close-modal" onclick="closeModal()">&times;</span>
+            <span class="close-modal" onclick="closeModal()">×</span>
 
-            <span class="nav-arrow prev-arrow" onclick="changePhoto(-1)">&#10094;</span>
-            <span class="nav-arrow next-arrow" onclick="changePhoto(1)">&#10095;</span>
+            <span class="nav-arrow prev-arrow" onclick="changePhoto(-1)">❮</span>
+            <span class="nav-arrow next-arrow" onclick="changePhoto(1)">❯</span>
 
             <img class="modal-content" id="zoomedImg">
         </div>
@@ -1116,7 +1185,7 @@
     </main>
 
     <footer>
-        <p>&copy;TTVB 2026</p>
+        <p>©TTVB 2026</p>
     </footer>
     <script>
         let currentPhotoIndex = 0;
