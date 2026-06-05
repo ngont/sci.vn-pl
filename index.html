@@ -418,6 +418,15 @@
             text-align: center;
         }
 
+        .time-subtext {
+            display: block;
+            font-size: 0.75rem;
+            font-weight: normal;
+            color: #666;
+            margin-top: 4px;
+            text-align: center;
+        }
+
         /* Node dot on the timeline */
         .session-time::after {
             content: "";
@@ -577,7 +586,7 @@
         /* Thêm class in nghiêng cho các diễn giả đặc biệt */
         .speaker-info-block.italic-title {
             font-style: italic;
-            color: #555;
+            color: #555; /* Đậm màu hơn một chút cho tiêu đề in nghiêng nổi bật */
         }
 
         /* Highlighted Box (For Section Intro / Summaries) */
@@ -617,64 +626,42 @@
             box-shadow: 0 6px 18px rgba(172, 28, 44, 0.08);
         }
 
-        /* Thiết kế khối Badge biểu tượng hình tròn cho biểu tượng bên trái */
-        .break-icon-wrapper {
-            width: 64px;
-            height: 64px;
-            background: linear-gradient(135deg, #fdf6f6 0%, #f7e6e6 100%);
-            border: 1px solid #fadbdc;
+        .break-icon {
+            font-size: 1.8rem;
+            background: #fcf4f5;
+            width: 55px;
+            height: 55px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            color: #ac1c2c;
             flex-shrink: 0;
-            box-shadow: inset 0 2px 4px rgba(255,255,255,0.9), 0 4px 8px rgba(172, 28, 44, 0.04);
-        }
-
-        /* Biểu tượng đứng độc lập bên phải không có vòng nền */
-        .break-icon-right-plain {
-            width: 64px;
-            height: 64px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-
-        .break-icon-art {
-            font-size: 1.9rem;
-            line-height: 1;
-            filter: drop-shadow(0 2px 3px rgba(172, 28, 44, 0.15));
-            display: inline-block;
-        }
-
-        /* Hiệu ứng khói bốc nhẹ cho ly cafe */
-        .steam-effect {
-            animation: steam 2.5s ease-in-out infinite;
-        }
-
-        @keyframes steam {
-            0% { transform: translateY(0) scale(1); opacity: 0.8; }
-            50% { transform: translateY(-2px) scale(1.05); opacity: 1; }
-            100% { transform: translateY(0) scale(1); opacity: 0.8; }
-        }
-
-        .break-info {
-            flex-grow: 1; /* Để phần nội dung chữ co giãn ở giữa */
         }
 
         .break-info h4 {
-            margin: 0 0 6px 0;
-            font-size: 1.2rem;
-            color: #1f1f1f;
-            font-weight: 700;
+            margin: 0 0 5px 0;
+            font-size: 1.15rem;
+            color: #222;
         }
 
         .break-info p {
             margin: 0;
-            color: #555;
-            font-size: 0.98rem;
-            line-height: 1.5;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* CHỈNH SỬA TẠI ĐÂY: Đường nét đứt tăng width: 50% và căn giữa trong vùng chi tiết */
+        .dashed-separator-block {
+            margin: 35px 0;
+            padding-left: 160px; /* Bằng khoảng cách của trục thời gian bên trái để căn giữa phần còn lại */
+            display: flex;
+            justify-content: center;
+        }
+
+        .dashed-line {
+            border-top: 2px dashed #e5e5e5;
+            width: 50%; /* Độ rộng 50% theo yêu cầu */
         }
 
         /* Mobile responsiveness */
@@ -705,6 +692,10 @@
             .session-details {
                 padding-left: 20px;
             }
+
+            .dashed-separator-block {
+                padding-left: 0; /* Trên mobile huỷ padding để căn giữa toàn màn hình */
+            }
         }
     </style>
 </head>
@@ -731,7 +722,7 @@
                 phát triển <br>Khoa học Công nghệ Việt Nam</h1>
 
             <div style="margin-bottom: 35px; font-size: 1.15rem; color: #e0e0e0; line-height: 1.8;">
-                <p>📅 <b>Ngày tổ chức:</b> 27 tháng 6 năm 2026 (11:00 - 15:00)</p>
+                <p>📅 <b>Ngày tổ chức:</b> 27 tháng 6 năm 2026 (11:00 - 15:00)(16:00 - 20:00 giờ Việt Nam)</p>
                 <p>📍 <b>Địa điểm:</b> Đại sứ quán Việt Nam tại Ba Lan, ul. Resorowa 36, 02-956 Warszawa</p>
             </div>
 
@@ -753,7 +744,7 @@
 
             <p>Việt Nam đang bước vào một kỷ nguyên chuyển mình mạnh mẽ, nơi Khoa học Công nghệ và Đổi mới sáng tạo được
                 xem là "chìa khóa vàng", là động lực quan trọng nhất để thúc đẩy tăng trưởng GDP và đưa đất nước phát
-                triển bền vững. Để hiện thực hóa tầm nhìn đó, Nhà nước đang có nhiều chính sách mời gọi nhân tài.</p>
+                triển bền vững. Để hiện thực hóa tầm nhìn đó, Nhà nước đang có many chính sách mời gọi nhân tài.</p>
 
             <p>Hàng loạt chính sách đột phá, những ưu đãi hấp dẫn cùng môi trường nghiên cứu ngày càng cởi mở đã được
                 ban hành với mục tiêu duy nhất: Thu hút và tạo không gian phát triển tốt nhất cho các nhà khoa học,
@@ -806,6 +797,7 @@
                 <div class="session-block">
                     <div class="session-time">
                         <span class="time-text">11:00 - 12:30</span>
+                        <span class="time-subtext">(16:00 - 17:30 giờ VN)</span>
                     </div>
                     <div class="session-details">
                         <div class="part-header">
@@ -838,7 +830,7 @@
                                     </span>
                                     <p class="timeline-speaker">
                                         <span class="speaker-icon">🎙️</span>
-                                        <span class="speaker-text-wrapper"><span class="speaker-name">Diễn giả:</span> Đại diện của Ủy ban Nhà nước
+                                        <span class="speaker-text-wrapper"><span class="speaker-name">Diễn giả:</span> Đại diện lãnh đạo của Ủy ban Nhà nước
                                             về người Việt Nam ở nước ngoài</span>
                                     </p>
                                 </div>
@@ -854,8 +846,7 @@
                                     </span>
                                     <p class="timeline-speaker">
                                         <span class="speaker-icon">🎙️</span>
-                                        <span class="speaker-text-wrapper"><span class="speaker-name">Diễn giả:</span> Đại diện lãnh đạo Vụ Hợp tác
-                                            Quốc tế, Bộ Khoa học và Công nghệ</span>
+                                        <span class="speaker-text-wrapper"><span class="speaker-name">Diễn giả:</span> Bà Trần Thanh Hà, Phó Vụ trưởng Vụ HTQT, Bộ Khoa học và Công nghệ</span>
                                     </p>
                                 </div>
                             </li>
@@ -895,76 +886,13 @@
                     </div>
                 </div>
 
-                <div class="session-block">
-                    <div class="session-time">
-                        <span class="time-text">12:30 - 12:50</span>
-                    </div>
-                    <div class="session-details">
-                        <div class="break-card">
-                            <div class="break-icon-wrapper">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="44" height="44" role="img" aria-label="Coffee cup">
-                                    <style>
-                                        .steam1 { animation: rise1 2.4s ease-in-out infinite; }
-                                        .steam2 { animation: rise2 2.4s ease-in-out infinite 0.5s; }
-                                        .steam3 { animation: rise3 2.4s ease-in-out infinite 1s; }
-                                        @keyframes rise1 {
-                                            0%   { opacity: 0;   transform: translateY(0)    scaleX(1); }
-                                            30%  { opacity: 0.9; transform: translateY(-4px)  scaleX(1.1); }
-                                            70%  { opacity: 0.5; transform: translateY(-9px)  scaleX(0.9); }
-                                            100% { opacity: 0;   transform: translateY(-13px) scaleX(1); }
-                                        }
-                                        @keyframes rise2 {
-                                            0%   { opacity: 0;   transform: translateY(0)    scaleX(1); }
-                                            30%  { opacity: 0.9; transform: translateY(-5px)  scaleX(0.9); }
-                                            70%  { opacity: 0.4; transform: translateY(-10px) scaleX(1.1); }
-                                            100% { opacity: 0;   transform: translateY(-14px) scaleX(1); }
-                                        }
-                                        @keyframes rise3 {
-                                            0%   { opacity: 0;   transform: translateY(0)   scaleX(1); }
-                                            30%  { opacity: 0.8; transform: translateY(-4px) scaleX(1.05); }
-                                            70%  { opacity: 0.4; transform: translateY(-8px) scaleX(0.95); }
-                                            100% { opacity: 0;   transform: translateY(-12px) scaleX(1); }
-                                        }
-                                    </style>
-                                    <!-- Steam wisps -->
-                                    <g fill="none" stroke="#ac1c2c" stroke-width="1.6" stroke-linecap="round">
-                                        <path class="steam1" d="M22 16 Q20 12 22 8" transform-origin="22 12"/>
-                                        <path class="steam2" d="M31 15 Q29 11 31 7" transform-origin="31 11"/>
-                                        <path class="steam3" d="M40 16 Q38 12 40 8" transform-origin="40 12"/>
-                                    </g>
-                                    <!-- Cup body -->
-                                    <path d="M14 22 L18 50 Q18.5 53 22 53 L42 53 Q45.5 53 46 50 L50 22 Z"
-                                          fill="#fff" stroke="#ac1c2c" stroke-width="1.8" stroke-linejoin="round"/>
-                                    <!-- Coffee liquid surface -->
-                                    <ellipse cx="32" cy="24" rx="14" ry="3.5" fill="#c8604a" opacity="0.85"/>
-                                    <!-- Cup inner gradient shading -->
-                                    <path d="M17 27 L20 49 Q20.3 51.5 22 51.5 L42 51.5 Q43.7 51.5 44 49 L47 27"
-                                          fill="url(#cupFill)" stroke="none"/>
-                                    <!-- Handle -->
-                                    <path d="M50 30 Q60 30 60 38 Q60 46 50 46"
-                                          fill="none" stroke="#ac1c2c" stroke-width="2.2" stroke-linecap="round"/>
-                                    <!-- Saucer -->
-                                    <ellipse cx="32" cy="55" rx="20" ry="3.5"
-                                             fill="#f7e6e6" stroke="#ac1c2c" stroke-width="1.4"/>
-                                    <defs>
-                                        <linearGradient id="cupFill" x1="0" y1="0" x2="0" y2="1">
-                                            <stop offset="0%"   stop-color="#c8604a" stop-opacity="0.25"/>
-                                            <stop offset="100%" stop-color="#c8604a" stop-opacity="0.08"/>
-                                        </linearGradient>
-                                    </defs>
-                                </svg>
-                            </div>
-                            <div class="break-info">
-                                <h4>Nghỉ giải lao (Coffee break)</h4>
-                                <p>Dùng trà, cà phê nhẹ và giao lưu tự do giữa các khách mời.</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="dashed-separator-block">
+                    <div class="dashed-line"></div>
                 </div>
 
                 <div class="session-block">
                         <div class="session-time">
-                            <span class="time-text">12:50 - 14:00</span>
+                            <span class="time-text">12:30 - 14:00</span>
                         </div>
                         <div class="session-details">
                             <div class="part-header">
@@ -977,7 +905,7 @@
                             </div>
 
                             <ul class="program-timeline">
-                                  <li class="timeline-item">
+                                <li class="timeline-item">
                                     <div class="timeline-marker">01</div>
                                     <div class="timeline-card">
                                         <span class="timeline-topic">Thảo luận về một số trọng tâm trong công cuộc phát triển KHCN ở Việt Nam</span>
@@ -991,8 +919,6 @@
                                         </p>
                                     </div>
                                 </li>
-
-
                                 <li class="timeline-item">
                                     <div class="timeline-marker">02</div>
                                     <div class="timeline-card">
@@ -1052,25 +978,17 @@
                                 <li class="timeline-item">
                                     <div class="timeline-marker">07</div>
                                     <div class="timeline-card">
-                                        <span class="timeline-topic">Khả năng chuyển giao công nghệ từ các đề án châu Âu sang Việt Nam</span>
+                                        <span class="timeline-topic">AI Tools — Từ startup cá nhân đến ứng dụng thực tế</span>
                                         <p class="timeline-speaker">
                                             <span class="speaker-icon">🎙️</span>
-                                            <span class="speaker-text-wrapper"><span class="speaker-name">Diễn giả:</span> TS. Cao Tuấn Vũ, Viện Nghiên cứu Không khí Na Uy (NILU)</span>
+                                            <span class="speaker-text-wrapper">
+                                                <span class="speaker-name">Bùi Phi Long,</span> CEO Swayze, thành viên sáng lập Hội Doanh nghiệp trẻ Việt Nam tại châu Âu
+                                            </span>
                                         </p>
                                     </div>
                                 </li>
                                 <li class="timeline-item">
                                     <div class="timeline-marker">08</div>
-                                    <div class="timeline-card">
-                                        <span class="timeline-topic">Hợp tác khoa học Việt Nam–Ba Lan trong lĩnh vực Địa chất</span>
-                                        <p class="timeline-speaker">
-                                            <span class="speaker-icon">🎙️</span>
-                                            <span class="speaker-text-wrapper"><span class="speaker-name">Diễn giả:</span> TS. Nguyễn Quốc Cường, Hội KH&CN Việt Nam–Ba Lan</span>
-                                        </p>
-                                    </div>
-                                </li>
-                                <li class="timeline-item">
-                                    <div class="timeline-marker">09</div>
                                     <div class="timeline-card">
                                         <span class="timeline-topic">Ứng dụng KH&CN nâng cao năng lực cạnh tranh của doanh nghiệp Việt tại Ba Lan</span>
                                         <p class="timeline-speaker">
@@ -1082,7 +1000,6 @@
                                         </p>
                                     </div>
                                 </li>
-                              
                             </ul>
                         </div>
                     </div>
